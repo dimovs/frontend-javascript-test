@@ -30,35 +30,34 @@ export default class Table extends Component {
 
 	_render() {
 		this._element.innerHTML = `
-		<table class="users__table">
-			<tr>
-				<th>
-					<span class="users__table-sort" data-item="sort" data-user-sort="id">id</span>
-				</th>
-				<th>
-					<span class="users__table-sort" data-item="sort" data-user-sort="firstName">firstName</span>
-				</th>
-				<th>
-					<span class="users__table-sort" data-item="sort" data-user-sort="lastName">lastName</span>
-				</th>
-				<th>
-					<span class="users__table-sort" data-item="sort" data-user-sort="email">email</span>
-				</th>
-				<th>
-					<span class="users__table-sort" data-item="sort" data-user-sort="phone">phone</span>
-				</th>
-			</tr>
-			${this._currentData.map((person) => `
-				<tr data-item="user" data-user-email="${person.email}">
-					<td>${person.id}</td>
-					<td>${person.firstName}</td>
-					<td>${person.lastName}</td>
-					<td>${person.email}</td>
-					<td>${person.phone}</td>
+			<table class="users__table">
+				<tr>
+					<th>
+						<span class="users__table-sort" data-item="sort" data-user-sort="id">id</span>
+					</th>
+					<th>
+						<span class="users__table-sort" data-item="sort" data-user-sort="firstName">firstName</span>
+					</th>
+					<th>
+						<span class="users__table-sort" data-item="sort" data-user-sort="lastName">lastName</span>
+					</th>
+					<th>
+						<span class="users__table-sort" data-item="sort" data-user-sort="email">email</span>
+					</th>
+					<th>
+						<span class="users__table-sort" data-item="sort" data-user-sort="phone">phone</span>
+					</th>
 				</tr>
-			`).join('')}
-		</table>
-		`
+				${this._currentData.map((person) => `
+					<tr data-item="user" data-user-email="${person.email}">
+						<td>${person.id}</td>
+						<td>${person.firstName}</td>
+						<td>${person.lastName}</td>
+						<td>${person.email}</td>
+						<td>${person.phone}</td>
+					</tr>`).join('')}
+			</table>
+		`;
 	}
 
 	_getInfoSorted() {

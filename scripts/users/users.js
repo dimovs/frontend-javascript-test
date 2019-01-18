@@ -1,7 +1,7 @@
-import Component from './component.js';
-import Controls from './controls.js';
-import Table from './table.js';
-import Info from './info.js';
+import Component from './components/component.js';
+import Controls from './components/controls.js';
+import Table from './components/table.js';
+import Info from './components/info.js';
 
 export default class Users extends Component {
 	
